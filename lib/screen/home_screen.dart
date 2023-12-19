@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 _DDay(onHeartPressed: onHeartPressed, firstDay: firstDay),
-                _CoupleImage(),
+                const _CoupleImage(),
               ])),
     );
   }
@@ -67,20 +67,20 @@ class _DDay extends StatelessWidget {
 
     return Column(children: [
       const SizedBox(height: 16),
-      Text('U&I', style: textTheme.headline1),
+      Text('U&I', style: textTheme.displayLarge),
       const SizedBox(height: 16),
-      Text('우리 처음 만난 날', style: textTheme.bodyText1),
+      Text('우리 처음 만난 날', style: textTheme.bodyLarge),
       Text('${firstDay.year}.${firstDay.month}.${firstDay.day}',
-          style: textTheme.bodyText2),
+          style: textTheme.bodyMedium),
       const SizedBox(height: 16),
       IconButton(
         iconSize: 60,
-        icon: Icon(Icons.favorite, color: Colors.red),
+        icon: const Icon(Icons.favorite, color: Colors.red),
         onPressed: onHeartPressed,
       ),
       const SizedBox(height: 16),
       Text('D+${DateTime.now().difference(firstDay).inDays + 1}',
-          style: textTheme.headline2),
+          style: textTheme.displayMedium),
     ]);
   }
 }

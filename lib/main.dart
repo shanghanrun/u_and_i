@@ -14,28 +14,28 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         fontFamily: 'Sunflower',
-        textTheme: TextTheme(
-          headline1: TextStyle(
+        textTheme: const TextTheme(
+          displayLarge: TextStyle(
               color: Colors.white,
               fontSize: 80.0,
               fontWeight: FontWeight.w700,
               fontFamily: 'parisienne'),
-          headline2: TextStyle(
+          displayMedium: TextStyle(
             color: Colors.white,
             fontSize: 50.0,
             fontWeight: FontWeight.w700,
           ),
-          bodyText1: TextStyle(
+          bodyLarge: TextStyle(
             color: Colors.white,
             fontSize: 30.0,
           ),
-          bodyText2: TextStyle(
+          bodyMedium: TextStyle(
             color: Colors.white,
             fontSize: 20.0,
           ),
         ),
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
